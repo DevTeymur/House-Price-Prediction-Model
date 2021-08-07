@@ -1,6 +1,6 @@
-Price prediction model for residental homes.
+# Price prediction model for residental homes.
 
-Data fields
+## Data fields
 
 SalePrice - the property's sale price in dollars. This is the target variable that you're trying to predict.
 MSSubClass: The building class
@@ -83,31 +83,15 @@ YrSold: Year Sold
 SaleType: Type of sale
 SaleCondition: Condition of sale
 
-Python Libraries:
+## Needed Libraries:
 Pandas, matplotlib, seaborn, numpy, sklearn, warnings, missingno.
 
 Processes:
 1. Data understanding
 2. Data preprocessing
 3. Cleaning outliers
-4. Creating different scenarios
-5. Apply regression algorithms to all scenarios
-6. Model tuning
+4. Apply regression algorithms to all scenarios
+5. Hyper Parameter tuning
 
-Scenarios:
-1. Dropping all NULL rows from dataset, minmax scale int columns and encode object
-columns.
 
-2. Filling NULL values with the most frequent in every column, minmax scale int columns and encode object
-columns.
-
-3. Filling NULL values with KNN imputer, minmax scale int columns and encode object
-columns.
-
-4. Filling NULL values with KNN imputer, implementing Local Outlier Factor, minmax scale int columns and encode object
-columns.
-
-5. Dropping columns that have high correlation, filling NULL values with KNN imputer, minmax scale int columns and encode object
-columns.
-
- At the end Ridge regression test RMSE was 0.07 in scenario 1.
+At the end Ridge regression with test RMSE was 0.04.
